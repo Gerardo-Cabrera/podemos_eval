@@ -1,0 +1,20 @@
+{% extends "../layouts/base.html" %}
+{% block content %}
+<h1>{{ grupos.nombre }}</h1>
+<ul>
+    <li>
+    	<div> 
+    		<p>
+    			<a href="{% url 'eval_podemos:miembros_grupo' grupos.id %}">Miembros</a>
+    		</p>
+    	</div>
+    </li>
+    <li>
+    	<div> 
+    		<p>
+    			<a href="{% url 'eval_podemos:cuentas_grupo' grupos.id %}">Cuentas</a>
+    		</p>
+    	</div>
+    </li>
+</ul>
+{% endblock %}
