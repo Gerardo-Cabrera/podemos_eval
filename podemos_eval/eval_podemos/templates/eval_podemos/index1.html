@@ -1,9 +1,0 @@
-{% if grupos %}
-    <ul>
-    {% for grupo in grupos %}
-        <li><a href="{% url 'eval_podemos:miembros_grupo' grupo.id %}">{{ grupo.nombre }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No grupos are available.</p>
-{% endif %}
