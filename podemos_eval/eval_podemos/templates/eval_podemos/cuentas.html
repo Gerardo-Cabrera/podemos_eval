@@ -1,0 +1,16 @@
+{% extends "../layouts/base.html" %}
+{% block content %}
+	{% if cuentas %}
+	    <ul>
+	    {% for cuenta in cuentas %}
+	        <li>
+	        	<p>
+	        		<a href="{% url 'eval_podemos:detalle_cuenta' cuenta.id %}">{{ cuenta.id }}</a>
+	        	</p>
+	        </li>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>No hay cuentas agregadas.</p>
+	{% endif %}
+{% endblock %}

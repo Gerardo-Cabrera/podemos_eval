@@ -1,0 +1,13 @@
+{% extends "../layouts/base.html" %}
+{% block content %}
+<h1>{{ grupo.nombre_grupo }}</h1>
+<ul>
+{% for cuenta in grupo.info %}
+    <li>
+    	<p>
+    		<a href="{% url 'eval_podemos:detalle_cuenta' cuenta.id %}">{{ cuenta.id }}</a>
+    	</p>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
